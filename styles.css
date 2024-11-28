@@ -1,0 +1,170 @@
+/* Root Variables for Colors and Styling */
+:root {
+    --background: url('https://img.goodfon.com/original/3840x2160/0/c9/black-panther-ai-art-dark-aesthetic-black-background-animals.jpg') no-repeat center center fixed;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.2);
+    --button-bg: rgba(255, 255, 255, 0.15);
+    --button-hover: rgba(255, 255, 255, 0.3);
+    --text-color: #ffffff;
+    --accent-color: #00d1b2;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+
+    --glass-bg: rgba(0, 0, 0, 0.3);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --button-bg: rgba(0, 0, 0, 0.3);
+    --button-hover: rgba(0, 0, 0, 0.5);
+    --text-color: #e5e5e5;
+    --accent-color: #29abe2;
+}
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* Container Centering */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.theme-switcher button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Calculator Styling */
+.calculator {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px var(--shadow-color);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Display Styling */
+.display {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: inset 0 4px 10px var(--shadow-color);
+    font-size: 32px;
+    padding: 15px;
+    text-align: right;
+    overflow-x: auto;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button Styling */
+.btn {
+    background: var(--button-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--button-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 2px 4px var(--shadow-color);
+}
+
+/* Operator Buttons */
+.operator {
+    color: var(--accent-color);
+}
+
+/* Special Buttons */
+.equals {
+    background: var(--accent-color);
+    color: #ffffff;
+    grid-column: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.memory, .sci {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+    .display {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .theme-switcher button {
+        font-size: 20px;
+    }
+}
