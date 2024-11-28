@@ -2,7 +2,7 @@
 ### Screenshot
 Here's a screenshot of the calculator app in action:
 
-![Calculator Screenshot](assets/calculator-screenshot.png)
+![Calculator Screenshot](calculator_screenshot.png)
 
 # Calculator Web Application
 
